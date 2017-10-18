@@ -1,0 +1,96 @@
+/*vue小demo的css*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  font-family: Ubuntu, simHei, sans-serif;
+  font-weight: 400
+}
+
+table, td, th {
+  border-collapse: collapse;
+  /*合并表格边框*/
+  border-spacing: 0
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #bcbcbc;
+  text-align: center;
+
+}
+
+th {
+  background-color: #42b983;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+}
+tr{
+  height: 3rem;
+  line-height: 3rem;
+}
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+fieldset {
+  border: 1px solid #BCBCBC;
+  padding: 15px;
+}
+
+input {
+  outline: none;
+}
+
+input[type=text] {
+  border: 1px solid #BCBCBC;
+  padding: .5rem .3rem;
+}
+
+input:focus {
+  border-color: #42b983;
+}
+
+button {
+  outline: none;
+  padding: 5px 8px;
+  color: #fff;
+  border: 1px solid #BCBCBC;
+  border-radius: 3px;
+  background-color: #42b983;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.form-group>label {
+  display: inline-block;
+  width: 10rem;
+  text-align: right;
+}
+
+.form-group>input, .form-group>select {
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.5rem
+}

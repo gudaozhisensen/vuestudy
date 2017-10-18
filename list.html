@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    html {
+      font-size: 12px;
+      font-family: Ubuntu, simHei, sans-serif;
+      font-weight: 400;
+    }
+
+    #app {
+      height: 30px;
+      width: 400px;
+      text-align: center;
+      /*border: 1px solid gray;*/
+    }
+
+    ul,
+    li,
+    a {
+      line-height: 1.5;
+      text-decoration: none;
+      list-style: none;
+      float: left;
+
+    }
+
+    .pagination {
+      display: inline-block;
+      border-radius: 3px;
+    }
+
+    .pagination>li {
+      display: inline;
+    }
+
+    .pagination>li>a {
+      position: relative;
+      float: left;
+      color: #009a61;
+      border: 1px solid #ddd;
+      padding: 9px 14px;
+      margin-left: -1px;
+    }
+
+    .pagination .active {
+      color: #fff;
+      background-color: #009a61;
+      border-left: none;
+      border-right: none;
+    }
+
+    .pagination>li>a:hover {
+      background-color: #eee;
+    }
+
+    .pagination .active:hover {
+      background: #009a61;
+      cursor: default;
+    }
+
+    .pagination li:first-child>a {
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    .pagination li:last-child>a {
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <div id="app">
+    <ul class="pagination">
+      <li v-for="n in pageCount">
+        <a href="javascript:void(0)" v-bind:class="(activeNumber==n)?'active':''">{{n}}</a>
+      </li>
+    </ul>
+  </div>
+  <script src="../vue/js/vue.min.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        activeNumber: 1,
+        pageCount: 10
+      }
+    })
+  </script>
+</body>
+
+</html>

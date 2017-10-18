@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p><input type="text" v-model="message"></p>
+    <p><button @click="greet">Greet</button></p>
+  </div>
+
+  <script src="js/vue.min.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        message: 'Hello World!'
+      },
+      methods: {
+        greet: function() {
+          alert(this.message)
+        }
+      }
+
+    })
+  </script>
+</body>
+
+</html>
